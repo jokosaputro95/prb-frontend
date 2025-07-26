@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { ThemeProvider } from '@/providers/ThemeProvider'
+import { ThemeProvider } from './providers/ThemeProvider'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -15,10 +15,12 @@ export default function RootLayout({
   return (
     <html lang="id" suppressHydrationWarning>
       <body className="antialiased">
-        <ThemeProvider>
-          {children}
-        </ThemeProvider>
+        <div className="min-h-screen bg-[#f7fafd] dark:bg-[#141c26] text-gray-800 dark:text-gray-100 transition-colors">
+          <ThemeProvider>
+            {children}
+          </ThemeProvider>
+        </div>
       </body>
-    </html>
+    </html >
   )
 }

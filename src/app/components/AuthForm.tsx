@@ -8,7 +8,7 @@ import {
   FaExclamationCircle
 } from 'react-icons/fa'
 import { toast, Toaster } from 'react-hot-toast'
-import { useTheme } from '@/providers/ThemeProvider'
+import { useTheme } from '../providers/ThemeProvider'
 
 type AuthMode = 'login' | 'register' | 'forgot'
 type ToastType = 'success' | 'error' | 'info' | 'warning'
@@ -531,9 +531,9 @@ export default function AuthForm() {
                           initial={{ opacity: 0, scale: 0.8 }}
                           animate={{ opacity: 1, scale: 1 }}
                           className={`text-sm font-medium ${passwordStrength.label === 'Lemah' ? 'text-red-500' :
-                              passwordStrength.label === 'Sedang' ? 'text-yellow-500' :
-                                passwordStrength.label === 'Bagus' ? 'text-blue-500' :
-                                  'text-green-500'
+                            passwordStrength.label === 'Sedang' ? 'text-yellow-500' :
+                              passwordStrength.label === 'Bagus' ? 'text-blue-500' :
+                                'text-green-500'
                             }`}
                         >
                           {passwordStrength.label}
@@ -785,8 +785,8 @@ export default function AuthForm() {
                   <button
                     onClick={copyPassword}
                     className={`ml-2 p-2 rounded-lg transition-all ${copied
-                        ? 'bg-green-500 text-white'
-                        : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+                      ? 'bg-green-500 text-white'
+                      : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
                       }`}
                     aria-label="Copy password"
                   >
