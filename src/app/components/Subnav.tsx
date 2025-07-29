@@ -1,20 +1,27 @@
 import React from "react";
 
 const subnavLinks = [
-    "Opinion",
-    "Economic",
-    "Featured",
-    "Global Affairs",
-    "Climate Change",
-    "Renewable Energy",
-    "Politics",
-    "Research",
+  "Breaking News",
+  "Politik",
+  "Hukum",
+  "Kriminal",
+  "Bisnis",
+  "Teknologi",
+  "Sains",
+  "Olahraga",
+  "Otomotif",
+  "Kesehatan",
+  "Hiburan",
+  "Kuliner",
+  "Pariwisata",
+  "Sejarah",
+  "Luar Negeri",
 ];
 
 export default function Subnav() {
-    return (
-        <div
-            className="
+  return (
+    <div
+      className="
         bg-red-600 text-white
         px-2 sm:px-6 py-2
         text-sm font-semibold
@@ -23,14 +30,14 @@ export default function Subnav() {
         whitespace-nowrap
         relative
       "
-            style={{
-                WebkitOverflowScrolling: "touch",
-                scrollbarWidth: "thin", // Firefox
-            }}
-        >
-            {/* Inline style tag for scrollbar (works in Next.js) */}
-            <style>
-                {`
+      style={{
+        WebkitOverflowScrolling: "touch",
+        scrollbarWidth: "thin", // Firefox
+      }}
+    >
+      {/* Inline style tag for scrollbar (works in Next.js) */}
+      <style>
+        {`
         /* Chrome, Safari, Edge scrollbar for this element only */
         .subnav-scroll::-webkit-scrollbar {
           height: 4px;
@@ -43,17 +50,17 @@ export default function Subnav() {
           background: #ef4444;
         }
         `}
-            </style>
-            <div className="flex gap-4 subnav-scroll w-full">
-                {subnavLinks.map((item) => (
-                    <span
-                        key={item}
-                        className="px-3 py-1 rounded-full cursor-pointer hover:bg-red-700 transition-all"
-                    >
-                        {item}
-                    </span>
-                ))}
-            </div>
-        </div>
-    );
+      </style>
+      <div className="flex gap-4 subnav-scroll w-full">
+        {subnavLinks.map((item) => (
+          <span
+            key={item}
+            className="px-3 py-1 rounded-full cursor-pointer hover:bg-red-700 transition-all"
+          >
+            {item}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
 }
